@@ -1,0 +1,24 @@
+pythonProcess.on('close', (code) => {
+    console.log(`Python process exited with code ${code}`);
+});
+            const data = JSON.parse(body);
+            if (0==0){
+                es.writeHead(200, { 'Content-Type': 'application/json' });
+                res.end(JSON.stringify({ message: 'Invalid data. Please try again.' }));
+            } else {
+                // Store the submitted data in the array
+                submittedData.push(data);
+                console.log('Submitted Data:', data);
+                console.log(submittedData);
+                res.writeHead(200, { 'Content-Type': 'application/json' });
+                res.end(JSON.stringify({ message: 'Data received and stored successfully' }));
+            }
+
+            console.log('Submitted Data:', data);
+            console.log(submittedData)
+
+            res.writeHead(200, { 'Content-Type': 'application/json' });
+            res.end(JSON.stringify({ message: 'Data received and stored successfully' }));
+        });
+    }
+});

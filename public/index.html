@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Photo event</title>
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      body {
+        background-color: lightblue;
+      }
+      .form-group {
+        display: flex;
+        flex-direction: column;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Welcome to MSCM photos</h1>
+      <img
+        src="https://cmsv2-assets.apptegy.net/uploads/18218/logo/19290/Manhattan_Center_for_Science_Mathematics_logo.png"
+        alt="MSCM Logo"
+        style="
+          width: 200px;
+          height: 200px;
+          float: right;
+          margin-top: 20px;
+          margin-left: 20px;
+        "
+      />
+      <form id="queueForm">
+        <div class="form-group">
+          <label for="lastName">Last Name:</label>
+          <input type="text" id="lastName" required />
+        </div>
+        <div class="form-group">
+          <label for="firstName">First Name:</label>
+          <input type="text" id="firstName" required />
+        </div>
+        <div class="form-group">
+          <label for="email">Email:</label>
+          <input type="email" id="email" required />
+        </div>
+        <input type="submit" value="Submit">
+      </form>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

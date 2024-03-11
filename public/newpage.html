@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Photo event</title>
+  <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            background-color: lightblue;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="hello">Hello, World!</h1>
+    <button id="btn">Run</button>
+    <script>
+        document.getElementById('btn').addEventListener('click', fetchData);
+
+        function fetchData() {
+            fetch('/hello')
+                .then(response => response.json())
+                .then(data => {
+                    document.getElementById('hello').innerText = data.message;
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                });
+        }
+    </script>
+</body>
+</html>
